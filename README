@@ -1,0 +1,12 @@
+# This is pretty much copy and paste of what the guidelines from OpenJDK developers have to say 
+#
+# Clone jdk9 forest
+
+hg clone hg.openjdk.java.net/jdk9/jdk9
+cd jdk9
+
+# Get source code, this will take a while
+bash get_source.sh
+
+# Run the attached script which does everything else for you, including setting the right C/C++ compiler flags (using gcc RedHat 7.2.1 toolchain on 4.13.9-200.fc26.x86_64)
+./build_openjdk9.sh
